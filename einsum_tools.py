@@ -65,4 +65,4 @@ def einsum(ind_str, A, B, tensd=False):
         c_a_inds, c_b_inds, out_ord = axe_order_inds(*parse_ind_str_to_num(ind_str))
         ind_map[ind_str] = (c_a_inds, c_b_inds, out_ord)
 
-    return einsum__(A, c_a_inds, B, c_b_inds, out_ord, tensd=False)
+    return einsum__(A, c_a_inds, B, c_b_inds, out_ord, tensd=tensd)
